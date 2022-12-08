@@ -5,7 +5,7 @@ permalink: /
 subtitle: <a href='#'>AHLab</a>. <a href='#'>School of Computing </a>. <a href='#'>National University of Singapore</a>
 
 profile:
-  align: left
+  align: right
   image: pic.jpg
   image_circular: true # crops the image to make it circular
   # address: >
