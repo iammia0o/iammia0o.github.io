@@ -6,7 +6,7 @@ subtitle: <a href='#'>AHLab</a>. <a href='#'>School of Computing </a>. <a href='
 
 profile:
   align: right
-  image: pic.jpg
+  image: profile_pic.jpg
   image_circular: true # crops the image to make it circular
   # address: >
   #   <p>555 your office number</p>
