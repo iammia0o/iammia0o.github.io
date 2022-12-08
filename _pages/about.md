@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='#'>AHLab</a>. <a href='#'>School of Computing </a>. <a href='#'>National University of Singapore</a>
 
 profile:
   align: left
