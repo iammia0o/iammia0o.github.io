@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='ahlab.org'>AHLab</a>. <a href='comp.nus.edu.sg'>School of Computing </a>. <a href='nus.edu.sg'>National University of Singapore</a>
+subtitle: <a href='https://ahlab.org'>AHLab</a>. <a href='https://comp.nus.edu.sg'>School of Computing </a>. <a href='https://nus.edu.sg'>National University of Singapore</a>
 
 profile:
   align: right
