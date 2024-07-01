@@ -9,14 +9,14 @@ category: work
 
 Are words just a tool to describe our inner states, or are they essential to shaping our very perception of the world?
 
-You guessed it correctly! Language shapes our perception, crystallizing abstract concepts and drawing similarities from categories that are so different. Without a label, a butterfly in the stomach, a fluttering heartbeat, and an electrifying feeling would be all so different. But with a label, we can call these feelings toward our partner "love." Impairing access to the semantic meanings of emotion words has been shown to impair the perception of emotional faces. In other words, emotion words constitute our emotional experience.
+You guessed it correctly! Language shapes our perception, crystallizing abstract concepts and drawing similarities from categories that are so different. Without a label, a butterfly in the stomach, a fluttering heartbeat, and an electrifying feeling would be all so different. But with a label, we can call these feelings toward our partners "love." Impairing access to the semantic meanings of emotion words has been shown to impair the perception of emotional faces. In other words, emotion words constitute our emotional experience.
 
 In this project, we explore the use of language, specifically granular emotional words, to improve emotion regulation ability. We hypothesize that providing granular emotion words at the right place and right time can help individuals crystallize new emotional concepts and, in turn, improve their emotion regulation ability.
 
 
 <div class="row justify-content-sm-center">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/hatthini-3views.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/hatthini-3views.png" title="interface" class="img-fluid rounded z-depth-1" %}
 
     </div>
 </div>
@@ -26,7 +26,7 @@ In this project, we explore the use of language, specifically granular emotional
 
 <div class="row justify-content-sm-center">
 <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/hatthini_proj_cover.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/hatthini_proj_cover.jpg" title="component" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
