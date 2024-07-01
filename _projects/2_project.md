@@ -16,7 +16,8 @@ In this project, we explore the use of language, specifically granular emotional
 
 <div class="row justify-content-sm-center">
     <div class="col-sm mt-3 mt-md-0">
-        <img src="assets/img/hatthini-3views.png" title="design-hatthini" class="img-fluid rounded z-depth-1" data-toggle="modal" data-target="#modal1">
+        {% include figure.html path="assets/img/hatthini-3views.png" title="example image" class="img-fluid rounded z-depth-1" %}
+
     </div>
 </div>
 <div class="caption">
@@ -25,7 +26,7 @@ In this project, we explore the use of language, specifically granular emotional
 
 <div class="row justify-content-sm-center">
 <div class="col-sm mt-3 mt-md-0">
-        <img src="assets/img/hatthini_proj_cover.jpg" title="model" class="img-fluid rounded z-depth-1" data-toggle="modal" data-target="#modal2">
+        {% include figure.html path="assets/img/hatthini_proj_cover.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
