@@ -13,17 +13,6 @@ You guessed it correctly! Language shapes our perception, crystallizing abstract
 
 In this project, we explore the use of language, specifically granular emotional words, to improve emotion regulation ability. We hypothesize that providing granular emotion words at the right place and right time can help individuals crystallize new emotional concepts and, in turn, improve their emotion regulation ability.
 
-<!-- <div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/hatthini-3views.png" title="design-hatthini" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/hatthini_proj_cover.jpg" title="model" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Left: the design and interface of Hatthini. Right: the theoretical model underlying Hatthini. 
-</div> -->
 
 <div class="row justify-content-sm-center">
     <div class="col-sm mt-3 mt-md-0">
