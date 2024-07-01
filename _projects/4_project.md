@@ -7,9 +7,9 @@ importance: 3
 category: past work
 ---
 
-Riverbank erosion poses a significant threat to the lives of thousands of people residing along the riverbanks. By accurately predicting the occurrence of erosion and understanding the impact of activities like sand mining on riverbanks, we can save countless lives. Riverbank erosion simulation can inform authorities to take prompt action and implement regulations to safeguard the riverbanks. However, simulating the impact of human activities on riverbank require extensive computational resources, hindering the research progress. 
+Riverbank erosion poses a significant threat to the lives of thousands of people residing along the riverbanks. By accurately predicting the occurrence of erosion and understanding the impact of activities like sand mining on riverbanks, we can save countless lives. Riverbank erosion simulation can inform authorities to take prompt action and implement regulations to safeguard the riverbanks. However, simulating the impact of human activities on riverbanks requires extensive computational resources, hindering research progress.
 
-In this project, we attempted to solve computational bottleneck by building a simulation system on GPU. Our system accurately simulated the changes in river flow, riverbed, provide information to predict riverbank erosion, while running orders of magnitude faster than traditional simulation systems that run on CPUs.  This project is a collaborative effort from researchers in UNIST, South Korea, and Vietnam National University, HCM
+In this project, we attempted to solve this computational bottleneck by building a simulation system on GPUs. Our system accurately simulated changes in river flow and riverbeds, providing information to predict riverbank erosion while running orders of magnitude faster than traditional simulation systems that run on CPUs. This project is a collaborative effort from researchers at UNIST, South Korea, and Vietnam National University, HCM.
 
 
 
