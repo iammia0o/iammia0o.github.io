@@ -19,7 +19,7 @@ In this project, we attempted to solve this computational bottleneck by building
     </div>
 </div>
 <div class="caption">
-    A snapshot of our simulation result: Change in the riverbed from 1998 to 2002
+    A snapshot of our simulation result: Changes in the riverbed from 1999 to 2002
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
