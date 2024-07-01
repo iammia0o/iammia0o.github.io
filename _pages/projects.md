@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Currently, I am focusing on designing language technologies for emotional well-being. My current projects draw knowledge from Deep Learning, Affective Science and Cognitive Psychology. In my past life, I am facinated about algorithms and computer systems, especially GPUs. Please see the collection of my past and current work here
+description: Currently, I am focusing on designing language technologies for emotional well-being. My current projects draw knowledge from Deep Learning, Affective Science and Cognitive Psychology. In my past life, I was facinated about algorithms and computer systems, especially GPUs. Please see the collection of my past and current work here
 nav: true
 nav_order: 2
 display_categories: [work, past work]
