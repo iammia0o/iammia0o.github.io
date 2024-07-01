@@ -2,7 +2,7 @@
 layout: page
 title: Hatthini
 description: Mastering Your Emotions
-img: assets/img/hatthini-icon.jpg
+img: assets/img/hatthini-icon.png
 importance: 2
 category: work
 ---
