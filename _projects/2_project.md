@@ -25,47 +25,23 @@ In this project, we explore the use of language, specifically granular emotional
     Left: the design and interface of Hatthini. Right: the theoretical model underlying Hatthini. 
 </div> -->
 
-<!-- Include Bootstrap CSS and JS if not already included -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
 <div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0">
         <img src="assets/img/hatthini-3views.png" title="design-hatthini" class="img-fluid rounded z-depth-1" data-toggle="modal" data-target="#modal1">
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
+</div>
+<div class="caption">
+    The design and interface of Hatthini
+</div>
+
+<div class="row justify-content-sm-center">
+<div class="col-sm mt-3 mt-md-0">
         <img src="assets/img/hatthini_proj_cover.jpg" title="model" class="img-fluid rounded z-depth-1" data-toggle="modal" data-target="#modal2">
     </div>
 </div>
 <div class="caption">
-    Left: the design and interface of Hatthini. Right: the theoretical model underlying Hatthini. 
+    How Hatthini works
 </div>
-
-<!-- Modal for the first image -->
-<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <img src="assets/img/hatthini-3views.png" class="img-fluid">
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal for the second image -->
-<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <img src="assets/img/hatthini_proj_cover.jpg" class="img-fluid">
-            </div>
-        </div>
-    </div>
-</div>
-
-
 ### Role: 
 1. Development: Developed the Hatthini chatbot system (from backend to front-end).
 2. Experiment: Designed the experiment, ran the user study (recruited participants, monitored their interactions, conducted interviews).
