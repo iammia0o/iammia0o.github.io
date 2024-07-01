@@ -32,10 +32,10 @@ In this project, we attempted to solve this computational bottleneck by building
 
 
 ### Role: 
-1. Collaborate with hydrologist scientist to create numerical solvers to Shallow-Water-Equations
-2. Implement these solvers in python and validate the accuracy 
-3. Implement these solvers in CUDA and validate the accuracy 
-4. Optimize the performance of the CUDA code on NVIDIA Titan-X GPU
+1. Collaborateed with hydrologist scientist to create numerical solvers to Shallow-Water-Equations, Sediment-Transfort-Equation
+2. Implemented these solvers in python and validate the accuracy 
+3. Implemented these solvers in CUDA and validate the accuracy 
+4. Optimized the performance of the CUDA code on NVIDIA Titan-X GPU
 
 ### Publication: 
 Thi Kim, Tran, Nguyen Thi Mai Huong, Nguyen Dam Quoc Huy, Pham Anh Tai, Sumin Hong, Tran Minh Quan, Nguyen Thi Bay, Won-Ki Jeong, and Nguyen Ky Phung. 2020. "Assessment of the Impact of Sand Mining on Bottom Morphology in the Mekong River in An Giang Province, Vietnam, Using a Hydro-Morphological Model with GPU Computing" Water 12, no. 10: 2912. https://doi.org/10.3390/w12102912

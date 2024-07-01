@@ -2,33 +2,20 @@
 layout: page
 title: Hatthini
 description: Mastering Your Emotions
-img: assets/img/hatthini_proj_cover.jpg
+img: assets/img/hatthini-icon.jpg
 importance: 2
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Are words just a tool to describe your inner states, or are they essential to shape our very perception of this world?
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+You guessed it correctly! Language shapes our perception, crystalizing abstractive concepts and draw similarities from categories that are so different. Without a label, a butterfly in the stomach, a fluttering heartbeat, and an electrifying feeling would be all so different. But with a label, we can call these feelings toward our partner “love”.  Impairing access to the semantic meanings of emotion words have been shown to impair the perceptions of emotional faces. In another words, emotion words constitute our emotional experience. 
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+In this project, we explore the use of language, more specifically, granular emotional words, to improve emotion regulation ability. We hypothesize that providing granular emotion word at right place and right time can help individuals crystalize new emotional concepts and in turn improve their emotion regulation ability.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/hatthini_design.jpg" title="Hatthini" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -38,9 +25,13 @@ To give your project a background in the portfolio page, just add the img tag to
 
 
 ### Role: 
-
+1. Developed the Hatthini chatbot system (from backend to front-end)
+2. Designed and tested the prompts
+3. Designed the experiment
+4. Ran the user study (recruited participants, monitored their interactions, conducted interviews)
+5. Analyze the resultd
+6. Write the paper
 
 ### Publication: 
+Mia Huong Nguyen, Dixon Daniel Prem, Suranga Nanayakkara. 2024. More than just words: Explore the Effect of Granular Affect Labeling on Emotion Regulation Ability. *Under review*
 
-
-### Application
