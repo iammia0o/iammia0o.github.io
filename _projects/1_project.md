@@ -2,7 +2,7 @@
 layout: page
 title: EMO-KNOW
 description: Know your emotions
-img: assets/img/EMNLP_poster_5599.jpg
+img: assets/img/emoknowcover.jpg
 importance: 1
 category: work
 ---
@@ -16,10 +16,22 @@ EMO-KNOW is our effort to overcome these shortcomings of existing datasets. In t
 In the first phase of the project, we created a dataset of 700,000 pairs of emotions and emotion causes, spanning 48 emotions.
 
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/EMNLP_poster_5599.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Summaries of EMO-KNOW first phase, presented in EMNLP 2023
+</div>
 
 
-
-
+## Role:
+1. Data curation : built scraping pipeline; explore data, refine search phrase
+2. Data cleaning: applied different techniques to clean data:  remove hashtags, anonymize tweets. remove profanity, recover abbreviation, acronyms, etc
+3. Data extraction: Created a finetuning dataset with GPT-3; tune different pre-trained LM for data extraction, evaluate them manually
+4. Data validation: Design human validation metrics, run validation on Amazon Mechanical Turks
+5. Paper writing
 
 
 
@@ -50,14 +62,7 @@ In the first phase of the project, we created a dataset of 700,000 pairs of emot
 <div class="caption">
     Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
 </div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+
 
 You can also put regular text between your rows of images.
 Say you wanted to write a little bit about your project before you posted the rest of the images.
