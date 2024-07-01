@@ -6,7 +6,7 @@ subtitle: <a href='https://ahlab.org'>AHLab</a>. <a href='https://comp.nus.edu.s
 
 profile:
   align: right
-  image: profile_pic.jpg
+  image: IMG_2087.jpg
   image_circular: false # crops the image to make it circular
   # address: >
   #   <p>555 your office number</p>
