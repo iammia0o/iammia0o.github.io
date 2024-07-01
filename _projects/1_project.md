@@ -7,11 +7,11 @@ importance: 1
 category: work
 ---
 
-What make you feel what you feel?
+What makes you feel what you feel?
 
-Human emotions are complex and multifaceted. What make a person feel happy and delightful can make another person feel disappointed. The relationship between emotion cause and emotions is many-to-many. To augment AI a better understanding of the true nature of human’s emotions, a large dataset on emotion and emotion cause is needed. Existing datasets are small in scale; require extensive human labor to label emotions and emotions cause. Moreover, these labels are biased and subjective to the human labelers, and often limited to a few stereotypical emotions such as happy, sad, disgust etc; ignoring more nuanced emotions such as pride, gratitude, nostalgia, etc. 
+Human emotions are complex and multifaceted. What makes one person feel happy and delighted can make another person feel disappointed. The relationship between emotion causes and emotions is many-to-many. To help AI understand the true nature of human emotions, a large dataset on emotions and their causes is needed. Existing datasets are small in scale and require extensive human labor to label emotions and their causes. Moreover, these labels are biased and subjective to the human labelers, and often limited to a few stereotypical emotions such as happy, sad, and disgust, ignoring more nuanced emotions such as pride, gratitude, and nostalgia.
 
-EMO-KNOW is our effort to overcome these shortcomings of existing datasets. In this project, we curated a large scale dataset consisting of 9.8 millions tweets over 15 years of where users mentioned how they feel and what caused their feelings. 
+EMO-KNOW is our effort to overcome these shortcomings of existing datasets. In this project, we curated a large-scale dataset consisting of 9.8 million tweets over 15 years, where users mentioned how they feel and what caused their feelings.
 
 In the first phase of the project, we created a dataset of 700,000 pairs of emotions and emotion causes, spanning 48 emotions.
 
@@ -27,10 +27,10 @@ In the first phase of the project, we created a dataset of 700,000 pairs of emot
 
 
 ### Role:
-1. Data curation : built scraping pipeline; explore data, refine search phrase
-2. Data cleaning: applied different techniques to clean data:  remove hashtags, anonymize tweets. remove profanity, recover abbreviation, acronyms, etc
-3. Data extraction: Created a finetuning dataset with GPT-3; tune different pre-trained LM for data extraction, evaluate them manually
-4. Data validation: Design human validation metrics, run validation on Amazon Mechanical Turks
+1. Data curation : Built scraping pipeline; explored data, refined search phrases.
+2. Data cleaning: Applied different techniques to clean data: removed hashtags, anonymized tweets, removed profanity, recovered abbreviations and acronyms, etc.
+3. Data Extraction: Created a fine-tuning dataset with GPT-3; tuned different pre-trained language models for data extraction, evaluated them manually.
+4. Data Validation: Designed human validation metrics, ran validation on Amazon Mechanical Turk.
 5. Paper writing
 
 
