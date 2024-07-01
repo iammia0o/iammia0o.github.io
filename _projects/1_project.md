@@ -26,7 +26,7 @@ In the first phase of the project, we created a dataset of 700,000 pairs of emot
 </div>
 
 
-## Role:
+### Role:
 1. Data curation : built scraping pipeline; explore data, refine search phrase
 2. Data cleaning: applied different techniques to clean data:  remove hashtags, anonymize tweets. remove profanity, recover abbreviation, acronyms, etc
 3. Data extraction: Created a finetuning dataset with GPT-3; tune different pre-trained LM for data extraction, evaluate them manually
@@ -35,9 +35,10 @@ In the first phase of the project, we created a dataset of 700,000 pairs of emot
 
 
 
-## Publication:
+### Publication:
 Mia Huong Nguyen, Yasith Samaradivakara, Prasanth Sasikumar, Chitralekha Gupta, and Suranga Nanayakkara. 2023. EMO-KNOW: A Large Scale Dataset on Emotion-Cause. In Findings of the Association for Computational Linguistics: EMNLP 2023, pages 11043–11051, Singapore. Association for Computational Linguistics.
 
+{% raw %}
 ```bibtex
 @inproceedings{emo-know-huongnguyen-2023,
     title = "{EMO}-{KNOW}: A Large Scale Dataset on Emotion-Cause",
@@ -54,4 +55,4 @@ Mia Huong Nguyen, Yasith Samaradivakara, Prasanth Sasikumar, Chitralekha Gupta, 
     doi = "10.18653/v1/2023.findings-emnlp.737",
 }
 ```
-
+{% endraw %}
