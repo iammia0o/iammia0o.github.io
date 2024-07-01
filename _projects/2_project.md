@@ -13,16 +13,17 @@ You guessed it correctly! Language shapes our perception, crystalizing abstracti
 
 In this project, we explore the use of language, more specifically, granular emotional words, to improve emotion regulation ability. We hypothesize that providing granular emotion word at right place and right time can help individuals crystalize new emotional concepts and in turn improve their emotion regulation ability.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/hatthini_design.jpg" title="Hatthini" class="img-fluid rounded z-depth-1" %}
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/hatthini-3views.png" title="design-hatthini" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/hatthini_proj_cover.jpg" title="model" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Design and interface of Hatthini
+    Left: the design and interface od Hatthini. Right: the theoretical model underlying Hatthini. 
 </div>
-
-
 
 ### Role: 
 1. Development: developed the Hatthini chatbot system (from backend to front-end)
@@ -32,3 +33,5 @@ In this project, we explore the use of language, more specifically, granular emo
 ### Publication: 
 Mia Huong Nguyen, Dixon Daniel Prem, Suranga Nanayakkara. 2024. More than just words: Explore the Effect of Granular Affect Labeling on Emotion Regulation Ability. *Under review*
 
+**Fun Fact** 
+Do you know that Hatthini means elaphant in the Pali language? The name is inspired by symbolic meaning of elephants in the Buddhist scripture. There, the elephant is he symbol for physical and emotional resilience - the main focus of this project. 
