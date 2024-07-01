@@ -2,7 +2,7 @@
 layout: page
 title: EMO-KNOW
 description: Know your emotions
-img: assets/img/emoknowcover.jpg
+img: assets/img/emoknowcover.png
 importance: 1
 category: work
 ---
@@ -53,4 +53,5 @@ Mia Huong Nguyen, Yasith Samaradivakara, Prasanth Sasikumar, Chitralekha Gupta, 
     url = "https://aclanthology.org/2023.findings-emnlp.737",
     doi = "10.18653/v1/2023.findings-emnlp.737",
 }
+```
 
