@@ -35,7 +35,7 @@ In this project, we explore the use of language, specifically granular emotional
 ### Role: 
 1. Development: Developed the Hatthini chatbot system (from backend to front-end).
 2. Experiment: Designed the experiment, ran the user study (recruited participants, monitored their interactions, conducted interviews).
-3. Analyst: Analyzed the results and wrote the paper.
+3. Analysis: Analyzed the results and wrote the paper.
 
 ### Publication: 
 Mia Huong Nguyen, Dixon Daniel Prem, Suranga Nanayakkara. 2024. More than just words: Exploring the Effect of Granular Affect Labeling on Emotion Regulation Ability. *Under review*.
