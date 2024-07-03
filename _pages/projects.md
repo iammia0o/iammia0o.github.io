@@ -7,7 +7,7 @@ description: Currently, I am focusing on designing technologies that leverage th
 
 nav: true
 nav_order: 2
-display_categories: [work, past work]
+display_categories: [current work, past work]
 horizontal: false
 ---
 
