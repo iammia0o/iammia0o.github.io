@@ -11,7 +11,7 @@ Storytelling has been a fundamental tool for sharing knowledge and fostering con
 
 However, modern life presents challenges to this age-old practice. Many families are geographically dispersed, making regular face-to-face interactions rare. Additionally, not everyone feels confident in their storytelling abilities, which can lead to fewer meaningful exchanges and a sense of disconnection among family members.
 
-In this project, we investigate the effect of storytelling using an AI-assisted storytelling application on intergenerational bonding, elderly's loneliness and confidence. 
+In this project, we examines how technology-facilitated storytelling can foster meaningful connections between generations while potentially improving the well-being of older adults.
 
 <!-- <div class="row justify-content-sm-center"> -->
 <div class="row">
