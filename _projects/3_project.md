@@ -26,7 +26,7 @@ In this project, we examines how technology-facilitated storytelling can foster 
     </div>
 </div>
 <div class="caption">
-    Interface of Memory Keeper. Designed by <a href="mailto:michelle@ahlab.org">Hanjun Wu</a>
+    Interface of Memory Keeper, designed by <a href="mailto:michelle@ahlab.org">Hanjun Wu</a>
 </div>
 
 ### Role: 
