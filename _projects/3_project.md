@@ -13,13 +13,20 @@ However, modern life presents challenges to this age-old practice. Many families
 
 In this project, we investigate the effect of storytelling using an AI-assisted storytelling application on intergenerational bonding, elderly's loneliness and confidence. 
 
-<div class="row justify-content-sm-center">
-<div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/assets/img/Memory Keeper - 2 minutes introduction.mp4" title="component" class="img-fluid rounded z-depth-1" %}
+<!-- <div class="row justify-content-sm-center"> -->
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/mk-firstpage.png" title="mk1" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/mk-signup.png" title="mk2" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/mk-homepage.png" title="mk3" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    2 minutes introduction on our project
+    Interface of Memory Keeper
 </div>
 
 ### Role: 
@@ -28,4 +35,5 @@ In this project, we investigate the effect of storytelling using an AI-assisted 
 - Research Lead
 
 **Note** 
+
 This project was selected to be part of the NUS-GRIP - an incubation program for spinning off promising technologies. 
