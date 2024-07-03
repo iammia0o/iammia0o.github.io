@@ -2,7 +2,7 @@
 layout: page
 title: Memory Keeper
 description: Create intergenerational bonding with AI-assisted storytelling
-img: assets/img/7.jpg
+img: assets/img/mk_logo.png
 importance: 3
 category: current work
 ---
