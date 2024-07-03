@@ -4,7 +4,7 @@ title: EMO-KNOW
 description: Know your emotions
 img: assets/img/emoknowcover.png
 importance: 1
-category: work
+category: current work
 ---
 
 What makes you feel what you feel?

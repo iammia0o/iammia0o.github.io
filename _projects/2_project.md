@@ -4,7 +4,7 @@ title: Hatthini
 description: Mastering Your Emotions
 img: assets/img/hatthini-icon.png
 importance: 2
-category: work
+category: current work
 ---
 
 Are words just a tool to describe our inner states, or are they essential to shaping our very perception of the world?
