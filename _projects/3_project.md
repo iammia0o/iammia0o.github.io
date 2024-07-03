@@ -26,7 +26,7 @@ In this project, we investigate the effect of storytelling using an AI-assisted 
     </div>
 </div>
 <div class="caption">
-    Interface of Memory Keeper
+    Interface of Memory Keeper. Designed by [Hanjun Wu](michalle@ahlab.org)
 </div>
 
 ### Role: 
