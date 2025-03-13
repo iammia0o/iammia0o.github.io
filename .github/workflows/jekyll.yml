@@ -1,31 +1,25 @@
 name: Build and deploy GitHub Pages
-
 on:
   push:
     branches: [ main ]  # or your default branch
   pull_request:
     branches: [ main ]
-
 jobs:
   build:
-    runs-on: ubuntu-latest  # or your self-hosted runner label
+    runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v3
     
     - name: Set up Ruby
-      run: |
-        mkdir -p /opt/hostedtoolcache/Ruby/3.1.4/x64
-        curl -fsSL https://github.com/rbenv/ruby-build/archive/refs/heads/master.tar.gz | tar -xz
-        cd ruby-build-master && ./install.sh
-        ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64
-        touch /opt/hostedtoolcache/Ruby/3.1.4/x64.complete
-        echo "/opt/hostedtoolcache/Ruby/3.1.4/x64/bin" >> $GITHUB_PATH
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1.4'
+        bundler-cache: true # This will handle caching correctly
     
     - name: Install dependencies
       run: |
         cd docs  # adjust if your Jekyll site is in a different directory
-        gem install bundler
         bundle install
     
     - name: Build site
