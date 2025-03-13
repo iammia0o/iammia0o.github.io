@@ -1,42 +1,50 @@
-name: deploy
-
+name: Build and deploy GitHub Pages
 on:
   push:
-    branches:
-      - master
-      - main
+    branches: [ main ]
   pull_request:
-    branches:
-      - master
-      - main
+    branches: [ main ]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+    
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-    - name: Setup Ruby
+    - uses: actions/checkout@v3
+    
+    # Force clearing cache
+    - name: Clear cache
+      uses: actions/cache@v3
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}-${{ github.run_id }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+    
+    - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.0.2'
-        bundler-cache: true
-    - name: Install deps
+        ruby-version: '3.1.4'  # Explicitly specify the version
+        bundler-cache: false   # Disable automatic bundler caching
+    
+    - name: Verify Ruby version
       run: |
-        npm install -g mermaid.cli
-    - name: Setup deploy options
-      id: setup
+        ruby --version
+        echo "Ruby path: $(which ruby)"
+        echo "Gem path: $(which gem)"
+        
+    - name: Install dependencies
       run: |
-        git config --global user.name "GitHub Action"
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        if [[ ${GITHUB_REF} = refs/pull/*/merge ]]; then # pull request
-          echo "SRC_BRANCH=${GITHUB_HEAD_REF}" >> $GITHUB_OUTPUT
-          echo "NO_PUSH=--no-push" >> $GITHUB_OUTPUT
-        elif [[ ${GITHUB_REF} = refs/heads/* ]]; then # branch, e.g. master, source etc
-          echo "SRC_BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
-        fi
-        echo "DEPLOY_BRANCH=gh-pages" >> $GITHUB_OUTPUT
-    - name: Deploy website 
-      run:  yes | bash bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }}
-                    --src ${{ steps.setup.outputs.SRC_BRANCH }} 
-                    --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }} 
+        gem install bundler
+        bundle install
+    
+    - name: Build site
+      run: |
+        bundle exec jekyll build
+    
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_site  # Adjust if your output directory is different
