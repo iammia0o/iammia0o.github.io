@@ -22,7 +22,7 @@ jobs:
       run: |
         gem install bundler
         bundle install
-        gem install uri -v 1.0.1
+        gem install uri -v 1.0.3
 
     - name: Build site
       run: |
