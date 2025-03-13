@@ -1,9 +1,10 @@
 name: Build and deploy GitHub Pages
 on:
   push:
-    branches: [ main ]  # or your default branch
+    branches: [ main ]
   pull_request:
     branches: [ main ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,25 +12,39 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
+    # Force clearing cache
+    - name: Clear cache
+      uses: actions/cache@v3
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}-${{ github.run_id }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+    
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.1.4'
-        bundler-cache: true # This will handle caching correctly
+        ruby-version: '3.1.4'  # Explicitly specify the version
+        bundler-cache: false   # Disable automatic bundler caching
     
+    - name: Verify Ruby version
+      run: |
+        ruby --version
+        echo "Ruby path: $(which ruby)"
+        echo "Gem path: $(which gem)"
+        
     - name: Install dependencies
       run: |
-        cd docs  # adjust if your Jekyll site is in a different directory
+        gem install bundler
         bundle install
     
     - name: Build site
       run: |
-        cd docs  # adjust if needed
         bundle exec jekyll build
     
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'  # or your default branch
+      if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/_site  # adjust if needed
+        publish_dir: ./_site  # Adjust if your output directory is different
