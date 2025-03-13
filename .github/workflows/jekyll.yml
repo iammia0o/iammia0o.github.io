@@ -1,50 +1,31 @@
-name: Build and deploy GitHub Pages
+name: Deploy Jekyll Site
+
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main  # Change this to your default branch if different
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
-    
+    runs-on: ubuntu-22.04  # Use a GitHub-supported image with Ruby pre-installed
+
     steps:
-    - uses: actions/checkout@v3
-    
-    # Force clearing cache
-    - name: Clear cache
-      uses: actions/cache@v3
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}-${{ github.run_id }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
-    
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.1.4'  # Explicitly specify the version
-        bundler-cache: false   # Disable automatic bundler caching
-    
-    - name: Verify Ruby version
-      run: |
-        ruby --version
-        echo "Ruby path: $(which ruby)"
-        echo "Gem path: $(which gem)"
-        
-    - name: Install dependencies
-      run: |
-        gem install bundler
-        bundle install
-    
-    - name: Build site
-      run: |
-        bundle exec jekyll build
-    
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site  # Adjust if your output directory is different
+      - uses: actions/checkout@v4
+      
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'  # Adjust if your site uses a different Ruby version
+          bundler-cache: true
+
+      - name: Install Dependencies
+        run: bundle install
+
+      - name: Build Site
+        run: JEKYLL_ENV=production bundle exec jekyll build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
