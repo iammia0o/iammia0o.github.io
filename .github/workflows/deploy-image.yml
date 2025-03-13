@@ -39,7 +39,9 @@ jobs:
 
     - name: Install deps
       run: npm install -g mermaid.cli
-
+    - name: Clean up artifacts
+      run: |
+        rm -rf ruby-build/
     - name: Setup deploy options
       id: setup
       run: |
