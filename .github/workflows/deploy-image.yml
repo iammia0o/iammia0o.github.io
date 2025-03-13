@@ -11,51 +11,26 @@ on:
       - main
 
 jobs:
-  deploy:
-    runs-on: ubuntu-22.04
+  build:
+    runs-on: ubuntu-22.04  # Use a stable GitHub-hosted image with Ruby pre-installed
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-    - name: Install ruby-build
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y build-essential libssl-dev libreadline-dev zlib1g-dev
-        git clone https://github.com/rbenv/ruby-build.git
-        sudo ./ruby-build/install.sh
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1.4'  # Adjust to match your site's requirements
+          bundler-cache: true
 
-    - name: Install Ruby 3.1.4
-      run: |
-        ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64
-        touch /opt/hostedtoolcache/Ruby/3.1.4/x64.complete
-        echo "export PATH=/opt/hostedtoolcache/Ruby/3.1.4/x64/bin:$PATH" >> $GITHUB_ENV
+      - name: Install Dependencies
+        run: bundle install
 
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.1.4'
-        bundler-cache: true
+      - name: Build Site
+        run: JEKYLL_ENV=production bundle exec jekyll build
 
-    - name: Install deps
-      run: npm install -g mermaid.cli
-    - name: Clean up artifacts
-      run: |
-        rm -rf ruby-build/
-    - name: Setup deploy options
-      id: setup
-      run: |
-        git config --global user.name "GitHub Action"
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        if [[ ${GITHUB_REF} = refs/pull/*/merge ]]; then # pull request
-          echo "SRC_BRANCH=${GITHUB_HEAD_REF}" >> $GITHUB_OUTPUT
-          echo "NO_PUSH=--no-push" >> $GITHUB_OUTPUT
-        elif [[ ${GITHUB_REF} = refs/heads/* ]]; then # branch, e.g. master, source etc
-          echo "SRC_BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
-        fi
-        echo "DEPLOY_BRANCH=gh-pages" >> $GITHUB_OUTPUT
-
-    - name: Deploy website 
-      run:  yes | bash bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }}
-                    --src ${{ steps.setup.outputs.SRC_BRANCH }} 
-                    --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }} 
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
