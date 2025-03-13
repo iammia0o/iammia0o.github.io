@@ -1,42 +1,41 @@
-name: Deploy Jekyll Site
+name: Build and deploy GitHub Pages
 
 on:
   push:
-    branches:
-      - main  # Change if your default branch is different
+    branches: [ main ]  # or your default branch
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
-    runs-on: ubuntu-24.04  # Required OS
-
+    runs-on: ubuntu-latest  # or your self-hosted runner label
+    
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Install Ruby
-        run: |
-          sudo apt update
-          sudo apt install -y rbenv ruby-build
-          rbenv init
-          echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-          echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-          source ~/.bashrc
-          rbenv install 3.1.4
-          rbenv global 3.1.4
-          ruby -v  # Verify Ruby installation
-
-      - name: Setup Bundler
-        run: |
-          gem install bundler
-          bundle config set path 'vendor/bundle'
-
-      - name: Install Dependencies
-        run: bundle install
-
-      - name: Build Site
-        run: JEKYLL_ENV=production bundle exec jekyll build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+    - uses: actions/checkout@v3
+    
+    - name: Set up Ruby
+      run: |
+        mkdir -p /opt/hostedtoolcache/Ruby/3.1.4/x64
+        curl -fsSL https://github.com/rbenv/ruby-build/archive/refs/heads/master.tar.gz | tar -xz
+        cd ruby-build-master && ./install.sh
+        ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64
+        touch /opt/hostedtoolcache/Ruby/3.1.4/x64.complete
+        echo "/opt/hostedtoolcache/Ruby/3.1.4/x64/bin" >> $GITHUB_PATH
+    
+    - name: Install dependencies
+      run: |
+        cd docs  # adjust if your Jekyll site is in a different directory
+        gem install bundler
+        bundle install
+    
+    - name: Build site
+      run: |
+        cd docs  # adjust if needed
+        bundle exec jekyll build
+    
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'  # or your default branch
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/_site  # adjust if needed
