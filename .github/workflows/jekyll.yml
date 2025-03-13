@@ -7,10 +7,19 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04  # Use a GitHub-supported image with Ruby pre-installed
+    runs-on: ubuntu-24.04  # Use a GitHub-supported image with Ruby pre-installed
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Install Ruby
+        run: |
+          sudo apt update
+          sudo apt install -y rbenv
+          rbenv init
+          eval "$(rbenv init -)"
+          rbenv install 3.1.4
+          rbenv global 3.1.4
       
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
