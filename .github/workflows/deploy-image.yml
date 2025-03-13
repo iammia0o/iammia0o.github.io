@@ -3,34 +3,57 @@ name: deploy
 on:
   push:
     branches:
-      - gh-pages
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-24.04-x64
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-    - name: Set up Ruby
-      uses: actions/setup-ruby@v1
-      with:
-        ruby-version: 3.0
-
-    - name: Install dependencies
+    - name: Install ruby-build
       run: |
-        gem install bundler
-        bundle install
-        gem install uri -v 1.0.3
+        sudo apt-get update
+        sudo apt-get install -y build-essential libssl-dev libreadline-dev zlib1g-dev
+        git clone https://github.com/rbenv/ruby-build.git
+        sudo ./ruby-build/install.sh
 
-    - name: Build site
+    - name: Install Ruby 3.1.4
       run: |
-        export JEKYLL_ENV=production
-        bundle exec jekyll build
+        ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64
+        touch /opt/hostedtoolcache/Ruby/3.1.4/x64.complete
+        echo "export PATH=/opt/hostedtoolcache/Ruby/3.1.4/x64/bin:$PATH" >> $GITHUB_ENV
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
+        ruby-version: '3.1.4'
+        bundler-cache: true
+
+    - name: Install deps
+      run: npm install -g mermaid.cli
+
+    - name: Setup deploy options
+      id: setup
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        if [[ ${GITHUB_REF} = refs/pull/*/merge ]]; then # pull request
+          echo "SRC_BRANCH=${GITHUB_HEAD_REF}" >> $GITHUB_OUTPUT
+          echo "NO_PUSH=--no-push" >> $GITHUB_OUTPUT
+        elif [[ ${GITHUB_REF} = refs/heads/* ]]; then # branch, e.g. master, source etc
+          echo "SRC_BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+        fi
+        echo "DEPLOY_BRANCH=gh-pages" >> $GITHUB_OUTPUT
+
+    - name: Deploy website 
+      run:  yes | bash bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }}
+                    --src ${{ steps.setup.outputs.SRC_BRANCH }} 
+                    --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }} 
