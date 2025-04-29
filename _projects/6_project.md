@@ -1,80 +1,40 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
-importance: 4
-category: fun
+title: GutIO
+description: Sense Emotions and Influence Gut Feelings with abdominal sounds
+img: assets/img/hatthini-icon.png
+importance: 2
+category: current work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Do emotions create detectable changes in abdominal sounds? Can we use abdominal sounds to in turn influence emotions and gut feelings?
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+In this project, we explored the potential of abdomial sounds for sensing emotions and inducing gut feelings through 2 studies. In the first study, we induced emotions and gut feelings in users and trained a machine learning model to see if they can pick up the changes create by emotions in abdomial sounds. In the second study, we used abdominal sounds found in clusters in study 1 and created haptic patterns to influence people's gastric interoception. We found that abdominal sound is a potential new modality for both sensing emotions and influencing gastric interoception. This work set the groundwork for future work to further explore gut-based interaction. 
 
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
 
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+
+### Publication:
+Mia Huong Nguyen, Yasith Samaradivakara, Prasanth Sasikumar, Chitralekha Gupta, and Suranga Nanayakkara. 2023. EMO-KNOW: A Large Scale Dataset on Emotion-Cause. In Findings of the Association for Computational Linguistics: EMNLP 2023, pages 11043–11051, Singapore. Association for Computational Linguistics.
 
 {% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+```bibtex
+@inproceedings{emo-know-huongnguyen-2023,
+    title = "{EMO}-{KNOW}: A Large Scale Dataset on Emotion-Cause",
+    author = "Nguyen, Mia Huong  and
+      Samaradivakara, Yasith  and
+      Sasikumar, Prasanth  and
+      Gupta, Chitralekha  and
+      Nanayakkara, Suranga",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2023",
+    month = dec,
+    year = "2023",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.findings-emnlp.737",
+    doi = "10.18653/v1/2023.findings-emnlp.737",
+}
 ```
 {% endraw %}
+
+s
