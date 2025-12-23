@@ -5,4 +5,4 @@ inline: true
 ---
 
 
-I'm attending CHI 2025 in Japan!
+I'm attending CHI 2025 in Japan! Happy to visit Japan again after 10 years! 
