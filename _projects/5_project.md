@@ -3,7 +3,7 @@ layout: page
 title: GutIO
 description: Sense Emotions and Influence Gut Feelings with abdominal sounds
 img: assets/img/gutio.png
-importance: 2
+importance: 1
 category: current work
 ---
 
