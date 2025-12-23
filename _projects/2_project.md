@@ -38,6 +38,10 @@ In this project, we explore the use of language, specifically granular emotional
 3. Analysis: Analyzed the results and wrote the paper.
 
 ### Publication: 
+
+**Mia Huong Nguyen**, Dixon Daniel Prem Rajendran, and Suranga Nanayakkara. "Beyond Happy and Sad: Exploring Granular Affect Labelling to Enhance Emotion Regulation Ability". 
+International Journal of Human-Computer Studies 2026 (forthcoming)
+
 {% raw %}
 ```
 @article{nguyenetal,
