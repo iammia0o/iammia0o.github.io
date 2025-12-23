@@ -38,7 +38,19 @@ In this project, we explore the use of language, specifically granular emotional
 3. Analysis: Analyzed the results and wrote the paper.
 
 ### Publication: 
-Mia Huong Nguyen, Dixon Daniel Prem, Suranga Nanayakkara. 2024. More than just words: Exploring the Effect of Granular Affect Labeling on Emotion Regulation Ability. *Under review*.
-
+{% raw %}
+```
+@article{nguyenetal,
+  abbr={IJHCS},
+  title={Beyond Happy and Sad: Exploring Granular Affect Labelling to Enhance Emotion Regulation Ability},
+  author={Nguyen, Mia Huong and Rajendran, Dixon Daniel Prem and Nanayakkara, Suranga },
+  journal={International Journal of Human-Computer Studies},
+  pages={},
+  year={2026},
+  selected = {true},
+  publisher={Elsevier}
+}
+```
+{% endraw %}
 **Fun Fact**  
 Did you know that Hatthini means elephant in the Pali language? The name is inspired by the symbolic meaning of elephants in Buddhist scripture. There, the elephant is the symbol of physical and emotional resilience - the main focus of this project.
