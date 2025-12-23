@@ -3,7 +3,7 @@ layout: page
 title: EMO-KNOW
 description: Know your emotions
 img: assets/img/emoknowcover.png
-importance: 1
+importance: 3
 category: current work
 ---
 
@@ -36,7 +36,7 @@ In the first phase of the project, we created a dataset of 700,000 pairs of emot
 
 
 ### Publication:
-Mia Huong Nguyen, Yasith Samaradivakara, Prasanth Sasikumar, Chitralekha Gupta, and Suranga Nanayakkara. 2023. EMO-KNOW: A Large Scale Dataset on Emotion-Cause. In Findings of the Association for Computational Linguistics: EMNLP 2023, pages 11043–11051, Singapore. Association for Computational Linguistics.
+**Mia Huong Nguyen**, Yasith Samaradivakara, Prasanth Sasikumar, Chitralekha Gupta, and Suranga Nanayakkara. 2023. EMO-KNOW: A Large Scale Dataset on Emotion-Cause. In Findings of the Association for Computational Linguistics: EMNLP 2023, pages 11043–11051, Singapore. Association for Computational Linguistics.
 
 {% raw %}
 ```bibtex

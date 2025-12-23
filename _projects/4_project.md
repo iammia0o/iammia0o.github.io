@@ -38,7 +38,7 @@ In this project, we attempted to solve this computational bottleneck by building
 4. Optimized the performance of the CUDA code on NVIDIA Titan-X GPU
 
 ### Publication: 
-Thi Kim, Tran, Nguyen Thi Mai Huong, Nguyen Dam Quoc Huy, Pham Anh Tai, Sumin Hong, Tran Minh Quan, Nguyen Thi Bay, Won-Ki Jeong, and Nguyen Ky Phung. 2020. "Assessment of the Impact of Sand Mining on Bottom Morphology in the Mekong River in An Giang Province, Vietnam, Using a Hydro-Morphological Model with GPU Computing" Water 12, no. 10: 2912. https://doi.org/10.3390/w12102912
+Thi Kim, Tran, **Nguyen Thi Mai Huong**, Nguyen Dam Quoc Huy, Pham Anh Tai, Sumin Hong, Tran Minh Quan, Nguyen Thi Bay, Won-Ki Jeong, and Nguyen Ky Phung. 2020. "Assessment of the Impact of Sand Mining on Bottom Morphology in the Mekong River in An Giang Province, Vietnam, Using a Hydro-Morphological Model with GPU Computing" Water 12, no. 10: 2912. https://doi.org/10.3390/w12102912
 
 
 ### Patent: 
