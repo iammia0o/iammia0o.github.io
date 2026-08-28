@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /writings/
+permalink: /teaching/
 title: writings
 description: Some of my reflection about life :) 
 nav: true
