@@ -146,7 +146,7 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
-  posts:
+  teaching:
     output: true
     permalink: /posts/:path/
   
