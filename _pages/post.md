@@ -4,7 +4,7 @@ permalink: /writings/
 title: writings
 nav: true
 nav_order: 4
-description: Some of my reflection about life :)
+description: Test
 pagination:
   enabled: true
   collection: posts
