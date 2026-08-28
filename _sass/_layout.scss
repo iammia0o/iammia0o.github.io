@@ -14,6 +14,17 @@ body {
   }
 }
 
+// Dark mode: body text in Courier New, headings in Consolas
+html[data-theme='dark'] body {
+  font-family: 'Courier New', Courier, monospace;
+
+  h1, h2, h3, h4, h5, h6,
+  .home-hero,
+  .home-hero-sub {
+    font-family: Consolas, 'SF Mono', Menlo, Monaco, 'Courier New', monospace;
+  }
+}
+
 body.fixed-top-nav {
   // Add some padding for the nav-bar.
   padding-top: 56px;

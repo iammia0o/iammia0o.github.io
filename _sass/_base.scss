@@ -142,6 +142,17 @@ blockquote {
   }
 }
 
+// Highlight band — tracks the current theme accent (burnt orange / hacker green)
+.highlight-band {
+  background-color: color-mix(in srgb, var(--global-theme-color) 80%, transparent);
+  color: #fff;
+  padding: 0.1em 0.3em;
+  border-radius: 0.15em;
+}
+html[data-theme='dark'] .highlight-band {
+  color: #0b0b0b;
+}
+
 .post-description {
   margin-bottom: 2rem;
   font-size: 0.875rem;
@@ -213,6 +224,16 @@ blockquote {
       &:hover {
         color: var(--global-hover-color);
       }
+  }
+  html[data-theme='dark'] & {
+    .navbar-brand,
+    .navbar-brand.title,
+    .navbar-nav .nav-item .nav-link {
+      color: var(--global-theme-color);
+    }
+    .navbar-brand.title {
+      font-family: Consolas, 'SF Mono', Menlo, Monaco, 'Courier New', monospace;
+    }
   }
   .navbar-brand.social {
     padding-bottom: 0;
