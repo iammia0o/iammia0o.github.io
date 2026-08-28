@@ -1,26 +1,32 @@
 ---
 layout: page
 permalink: /writings/
-title: writings
+title: WRITINGS
 description: Some of my reflection about life :) 
+description_italic: false
 nav: true
 nav_order: 4
 ---
 
-<div class="post">
-  <ul class="post-list">
+<div class="writings">
+  <div class="grid">
+    <div class="grid-sizer"></div>
     {% assign writings = site.writings | sort: "date" | reverse %}
     {% for post in writings %}
-    {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
-    <li>
-      <h3>
-        <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </h3>
-      {% if post.description %}<p class="post-description">{{ post.description }}</p>{% endif %}
-      <p class="post-meta">
-        {{ post.date | date: "%B %-d, %Y" }} &nbsp;&middot;&nbsp; {{ read_time }} min read
-      </p>
-    </li>
+    <div class="grid-item">
+      <a href="{{ post.url | relative_url }}">
+        <div class="card hoverable">
+          {% if post.img %}
+          {% include figure.html path=post.img alt=post.title %}
+          {% endif %}
+          <div class="card-body">
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p class="card-text font-italic">{{ post.description }}</p>
+            <p class="card-text text-muted small mb-0">{{ post.date | date: "%b %-d, %Y" }}</p>
+          </div>
+        </div>
+      </a>
+    </div>
     {% endfor %}
-  </ul>
+  </div>
 </div>
