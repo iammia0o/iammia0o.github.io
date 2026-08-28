@@ -35,7 +35,152 @@ body.sticky-bottom-footer {
   }
 }
 
-// TODO: redefine content layout.
+// =============================================================
+// Home page — two-column grid, editorial feel
+// (fonts & colors kept in sync with the site theme)
+// =============================================================
+
+// Widen the container on the home page only (default is $max-content-width).
+.container:has(.home-grid) {
+  max-width: 1080px;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 3rem;
+  align-items: start;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.home-content {
+  min-width: 0;
+
+  h3:first-child {
+    margin-top: 0;
+  }
+
+  // First paragraph — slightly larger, editorial lead-in
+  .home-bio > p:first-of-type {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--global-text-color);
+  }
+}
+
+// Hero heading — the person's name (keeps Cinzel + theme accent)
+.home-hero {
+  font-family: 'Cinzel', serif;
+  font-size: 2.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  color: var(--global-theme-color);
+
+  &::after {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.home-hero-sub {
+  font-family: 'EB Garamond', Garamond, 'Times New Roman', serif;
+  font-size: 1.0625rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 2rem;
+  font-style: italic;
+  max-width: none;
+}
+
+.home-sidebar {
+  min-width: 0;
+
+  @media (max-width: 768px) {
+    // portrait already shown inline on mobile via .home-content
+    .banner-frame { display: none; }
+  }
+}
+
+// Banner / portrait image — editorial frame with caption
+.banner-frame {
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--global-divider-color);
+  background-color: var(--global-card-bg-color);
+
+  &.d-md-none { margin-top: 1.5rem; }
+
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 0;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &:hover img {
+    transform: scale(1.02);
+  }
+
+  .banner-caption {
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    color: var(--global-text-color-light);
+    font-style: italic;
+    border-top: 1px solid var(--global-divider-color);
+    background-color: var(--global-bg-color);
+  }
+}
+
+// News timeline
+.news-timeline {
+  margin-top: 2rem;
+
+  h4 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.02em;
+  }
+
+  .news-list-scrollable {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .news-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .news-date {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--global-text-color-light);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .news-headline {
+    margin-top: 0.25rem;
+    color: var(--global-text-color);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+}
 
 
 /******************************************************************************
