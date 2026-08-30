@@ -1,0 +1,35 @@
+{%- comment -%}
+  Prev/next navigation for a post that belongs to a series.
+  Expects page.series (the series slug).
+{%- endcomment -%}
+{%- assign parts = site.writings | where: "series", page.series | sort: "part" -%}
+{%- assign series_doc = site.series | where: "slug", page.series | first -%}
+{%- assign cur = 0 -%}
+{%- for post in parts -%}
+  {%- if post.url == page.url -%}{%- assign cur = forloop.index0 -%}{%- endif -%}
+{%- endfor -%}
+{%- assign prev_i = cur | minus: 1 -%}
+{%- assign next_i = cur | plus: 1 -%}
+
+<nav class="series-nav">
+  <p class="series-nav-meta">
+    Part {{ cur | plus: 1 }} of {{ parts | size }} in
+    <a href="{{ series_doc.url | relative_url }}">{{ series_doc.title }}</a>
+  </p>
+  <div class="series-nav-links">
+    {%- if cur > 0 -%}
+      {%- assign p = parts[prev_i] -%}
+      <a class="series-nav-prev" href="{{ p.url | relative_url }}">
+        <span class="series-nav-dir">← Previous</span>
+        <span class="series-nav-title">{{ p.title }}</span>
+      </a>
+    {%- endif -%}
+    {%- if next_i < parts.size -%}
+      {%- assign n = parts[next_i] -%}
+      <a class="series-nav-next" href="{{ n.url | relative_url }}">
+        <span class="series-nav-dir">Next →</span>
+        <span class="series-nav-title">{{ n.title }}</span>
+      </a>
+    {%- endif -%}
+  </div>
+</nav>

@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<!-- series.html -->
+{%- assign parts = site.writings | where: "series", page.slug | sort: "part" -%}
+
+<div class="post series-page">
+
+  <header class="post-header text-center">
+    <p class="series-kicker">A series · {{ parts | size }} part{% if parts.size != 1 %}s{% endif %}</p>
+    <h2 class="post-title">{{ page.title }}</h2>
+    <p class="post-description{% if page.description_italic %} font-italic{% endif %}">{{ page.description }}</p>
+  </header>
+
+  {%- if content != "" %}
+  <article class="series-intro">
+    {{ content }}
+  </article>
+  {%- endif %}
+
+  <ol class="series-list">
+    {%- for post in parts %}
+    <li class="series-list-item">
+      <a href="{{ post.url | relative_url }}">
+        <span class="series-part-num">{{ post.part | default: forloop.index }}</span>
+        <span class="series-part-body">
+          <span class="series-part-title">{{ post.title }}</span>
+          {%- if post.description %}
+          <span class="series-part-desc font-italic">{{ post.description }}</span>
+          {%- endif %}
+          <span class="series-part-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ol>
+
+  <p class="series-back"><a href="{{ '/writings/' | relative_url }}">← All writings</a></p>
+
+</div>

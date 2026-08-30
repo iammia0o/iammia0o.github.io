@@ -13,4 +13,8 @@ layout: default
             {{ content }}
           </article>
 
+          {% if page.series %}
+            {% include series_nav.html %}
+          {% endif %}
+
         </div>
