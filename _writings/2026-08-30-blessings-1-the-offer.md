@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Part I: Pre-journey"
+title: "I: Pre-journey"
 description: How I ended up here in the first place.
 description_italic: true
 date: 2026-08-30

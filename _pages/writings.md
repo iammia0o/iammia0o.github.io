@@ -12,8 +12,7 @@ nav_order: 4
 {% assign standalone = site.writings | where_exp: "w", "w.series == nil" | sort: "date" | reverse %}
 
 <div class="writings">
-  <div class="grid">
-    <div class="grid-sizer"></div>
+  <div class="card-grid">
 
     {% for s in series_list %}
     {% assign parts = site.writings | where: "series", s.slug %}
@@ -27,7 +26,7 @@ nav_order: 4
           <div class="card-body">
             <h2 class="card-title">{{ s.title }}</h2>
             <p class="card-text font-italic">{{ s.description }}</p>
-            <p class="card-text text-muted small mb-0">A series</p>
+            <p class="card-text text-muted small mb-0">A {{s.type}}</p>
           </div>
         </div>
       </a>

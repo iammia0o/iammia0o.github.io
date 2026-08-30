@@ -165,6 +165,9 @@ news_limit: 10 # leave blank to include all the news in the `_news` folder
 # Jekyll settings
 # -----------------------------------------------------------------------------
 
+# Render documents dated in the future (lets series parts carry their own dates)
+future: true
+
 # Markdown and syntax highlight
 markdown: kramdown
 highlighter: rouge

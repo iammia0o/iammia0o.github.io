@@ -7,7 +7,7 @@ layout: default
 <div class="post series-page">
 
   <header class="post-header text-center">
-    <p class="series-kicker">A series · {{ parts | size }} part{% if parts.size != 1 %}s{% endif %}</p>
+    <p class="series-kicker">A {{page.type}} · {{ parts | size }} part{% if parts.size != 1 %}s{% endif %}</p>
     <h2 class="post-title">{{ page.title }}</h2>
     <p class="post-description{% if page.description_italic %} font-italic{% endif %}">{{ page.description }}</p>
   </header>
