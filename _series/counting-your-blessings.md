@@ -7,4 +7,4 @@ img: assets/img/5.jpg
 date: 2026-08-30
 ---
 
-A few things I want to remember before I forget them. Read in order, or wander.
+A few things I want to remember before I forget them. Recollected in chronological order
