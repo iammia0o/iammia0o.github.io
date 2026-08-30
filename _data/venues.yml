@@ -12,3 +12,11 @@
 "IJHCS":
   url: https://www.sciencedirect.com/journal/international-journal-of-human-computer-studies
   # color: "#00369f"
+
+"CHI": 
+  url: https://chi2026.acm.org/
+  # color: "#e34c26"
+
+"UIST":
+  url: https://uist.acm.org/uist2027/
+  # color: "#e34c26"
