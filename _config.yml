@@ -3,9 +3,9 @@
 # -----------------------------------------------------------------------------
 
 title:  Mia Huong Nguyen # the website title (if blank, full name will be used instead)
-first_name: Mia
-middle_name: Huong
-last_name: Nguyen
+first_name: Mia Hương
+middle_name: 
+last_name: Nguyễn
 email: mia@ahlab.org
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Mia's personal website
