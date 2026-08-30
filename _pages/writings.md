@@ -2,7 +2,7 @@
 layout: page
 permalink: /writings/
 title: WRITINGS
-description: Some of my reflection about life :) 
+description: I've been writing diary since 2009, (unknowingly) as a form of therapy (I guess I have too many thoughts to the point that I need to sort them out to stay sane). Overtime I realize that some of my writings are quite positive and make me smile and feel proud of the little girl that wrote it. If you happen to encounter my writings, I hope you enjoy my journey of overcoming adversaries, fighting for excellence, and finding meaning. :) 
 description_italic: false
 nav: true
 nav_order: 4

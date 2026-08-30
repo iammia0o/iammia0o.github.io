@@ -1,6 +1,6 @@
 ---
 layout: series
-title: "Counting your blessings: A short PhD memoir"
+title: "Counting your blessings: A brief PhD memoir"
 description: A short PhD memoir, told in parts.
 description_italic: true
 img: assets/img/5.jpg

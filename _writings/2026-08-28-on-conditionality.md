@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Dependent Origination, Umvelt, and Predictive Coding 
+title: "Dependent Origination, Umvelt, and Predictive Coding: A Bayesian view" 
 description: A simplist take on the Buddhist teaching of Dependent Origination
 description_italic: true
 series: I-think-therefore-I-write
