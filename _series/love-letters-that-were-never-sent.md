@@ -1,7 +1,7 @@
 ---
 layout: series
 title: "Love letters that were never sent"
-description: "Love is a diamond. "
+description: "To people that I love but never say it out loud."
 description_italic: true
 type: collection
 img: assets/img/7.jpg
