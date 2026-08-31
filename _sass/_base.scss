@@ -166,6 +166,22 @@ html[data-theme='dark'] .highlight-band {
 }
 
 
+// Drop shadows only on hover — cards & buttons sit flat at rest
+
+.card,
+.btn,
+.badge,
+.hoverable {
+  box-shadow: none !important;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+  }
+}
+
+
 // Navbar customization
 
 .navbar {
